@@ -1,0 +1,49 @@
+---
+title: "Working with Vectors"
+author: "Hailey Veirs"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## Creating Vectors
+Vectors must have the same class, such as "chr" (character), "num" (numeric), "float" (floating)
+Can check class using "class()" function
+
+```{r}
+marmots <- c("blue", "green", 4, "yellow")
+
+#Check the class of our vector
+class(marmots)
+```
+
+```{r}
+pika <- c(12.4, 6.8, 8.6, 7.4, 5.3)
+
+class(pika)
+
+# Do scalar multiplication on the pika vector
+pika_scalar <- 5.2 * pika
+```
+
+Vector operations
+
+Dot product is done using %*% between the vectors in the order to want the dot product to be.
+
+```{r}
+bananas <- c(1, 2, 3)
+apples <- c(6, 7, 8)
+
+bananas + apples
+bananas - apples
+
+# Dot product of vectors is "%*%"
+bananas %*% apples
+```
+
+
