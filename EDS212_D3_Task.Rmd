@@ -61,5 +61,9 @@ class(my_matrix)
 
 # "glimpse" shows info on data frames and matricies
 glimpse(penguins)
+
 ```
 
+## Tasks 
+
+### Section 1
