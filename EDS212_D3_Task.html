@@ -372,6 +372,62 @@ pre code {
 
 <div id="creating-vectors" class="section level2">
 <h2>Creating Vectors</h2>
+<p>Vectors must have the same class, such as “chr” (character), “num”
+(numeric), “float” (floating), “int” (integers) Can check class using
+“class()” function</p>
+<pre class="r"><code>marmots &lt;- c(&quot;blue&quot;, &quot;green&quot;, 4, &quot;yellow&quot;)
+
+#Check the class of our vector
+class(marmots)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>pika &lt;- c(12.4, 6.8, 8.6, 7.4, 5.3)
+
+class(pika)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code># Do scalar multiplication on the pika vector
+pika_scalar &lt;- 5.2 * pika</code></pre>
+<p>Vector operations</p>
+<p>Dot product is done using %*% between the vectors in the order to
+want the dot product to be.</p>
+<pre class="r"><code>bananas &lt;- c(1, 2, 3)
+apples &lt;- c(6, 7, 8)
+
+bananas + apples</code></pre>
+<pre><code>## [1]  7  9 11</code></pre>
+<pre class="r"><code>bananas - apples</code></pre>
+<pre><code>## [1] -5 -5 -5</code></pre>
+<pre class="r"><code># Dot product of vectors is &quot;%*%&quot;
+bananas %*% apples</code></pre>
+<pre><code>##      [,1]
+## [1,]   44</code></pre>
+</div>
+<div id="making-matrices" class="section level2">
+<h2>Making Matrices</h2>
+<p>To make a matrix, you can make a sequence of values and then tell R
+to make a matrix of m rows and n columns</p>
+<pre class="r"><code>my_values &lt;- seq(from = 1, to = 10) # can add &quot;length&quot; to make 50 diff numbers evenly spaced
+
+my_matrix &lt;- matrix(data = my_values, nrow = 2, ncol = 5, byrow = TRUE)
+
+# Matrices operate similarly to vectors
+5 * my_matrix # scalar multiplication</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    5   10   15   20   25
+## [2,]   30   35   40   45   50</code></pre>
+<pre class="r"><code>class(my_matrix)</code></pre>
+<pre><code>## [1] &quot;matrix&quot; &quot;array&quot;</code></pre>
+<pre class="r"><code># &quot;glimpse&quot; shows info on data frames and matricies
+glimpse(penguins)</code></pre>
+<pre><code>## Rows: 344
+## Columns: 8
+## $ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…
+## $ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…
+## $ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …
+## $ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …
+## $ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…
+## $ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …
+## $ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…
+## $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…</code></pre>
 </div>
 
 

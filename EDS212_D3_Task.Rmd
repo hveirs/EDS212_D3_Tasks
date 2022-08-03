@@ -12,7 +12,7 @@ library(palmerpenguins)
 ```
 
 ## Creating Vectors
-Vectors must have the same class, such as "chr" (character), "num" (numeric), "float" (floating)
+Vectors must have the same class, such as "chr" (character), "num" (numeric), "float" (floating), "int" (integers)
 Can check class using "class()" function
 
 ```{r}
@@ -46,4 +46,20 @@ bananas - apples
 bananas %*% apples
 ```
 
+## Making Matrices 
+
+To make a matrix, you can make a sequence of values and then tell R to make a matrix of m rows and n columns
+
+```{r}
+my_values <- seq(from = 1, to = 10) # can add "length" to make 50 diff numbers evenly spaced
+
+my_matrix <- matrix(data = my_values, nrow = 2, ncol = 5, byrow = TRUE)
+
+# Matrices operate similarly to vectors
+5 * my_matrix # scalar multiplication
+class(my_matrix)
+
+# "glimpse" shows info on data frames and matricies
+glimpse(penguins)
+```
 
